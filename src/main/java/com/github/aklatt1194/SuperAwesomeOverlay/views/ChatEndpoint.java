@@ -72,6 +72,7 @@ public class ChatEndpoint {
                 System.err.println("Failed to deliver message to chat frontend");
                 e.printStackTrace();
             }
+            send(message);
         }
     }
     

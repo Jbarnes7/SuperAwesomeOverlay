@@ -54,6 +54,7 @@ public class ChatEndpoint {
             System.err.println("Error sending message to socket");
             e.printStackTrace();
         }
+        send(message);
     }
     
     /**
@@ -72,7 +73,6 @@ public class ChatEndpoint {
                 System.err.println("Failed to deliver message to chat frontend");
                 e.printStackTrace();
             }
-            send(message);
         }
     }
     

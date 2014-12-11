@@ -34,7 +34,7 @@ SAO.chat = function() {
   socket.onmessage = function(data) {
     var msg = JSON.parse(data.data);
 
-    var time = $('<span></span>').html(new Date(msg.timestamp).toLocaleTimeString()).addClass('timestamp');
+    var time = $('<span></span>').html(new Date(msg.timestamp).toLocaleTimeString() " ").addClass('timestamp');
     var name = $('<span></span>').html(msg.user).addClass('username');
     var message = $('<span></span>').html(msg.message).css("color", msg.color).addClass('message');
     var linebreak = $('<br/>');
